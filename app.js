@@ -10,6 +10,7 @@ const UserModel = require("./model/userSchema");
 //body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 const DB_URI = process.env.DB_URI;
 mongoose.connect(DB_URI);
